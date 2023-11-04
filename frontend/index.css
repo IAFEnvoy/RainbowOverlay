@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Minecraftia";
+    src: url("Minecraftia.ttf");
+}
+
+html,
+body {
+    font-family: Minecraftia;
+    -webkit-app-region: drag;
+}
+
+.rainbow_text {
+    background-image: -webkit-linear-gradient(left,
+            hsl(0deg, 100%, 50%),
+            hsl(60deg, 100%, 50%),
+            hsl(120deg, 100%, 50%),
+            hsl(180deg, 100%, 50%),
+            hsl(240deg, 100%, 50%),
+            hsl(300deg, 100%, 50%),
+            hsl(360deg, 100%, 50%));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    animation: rainbow 4s infinite linear;
+    font-size: 18px;
+    width: fit-content;
+    height: fit-content;
+    -webkit-app-region: drag;
+    user-select: none;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
